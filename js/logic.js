@@ -8,10 +8,10 @@ NOTE: use a `for` loop to make this happen.
 */
 
 function sum (options) {
-	var total = 0;
+	var total = +options[0].value;
 
-	for (var i = 0; i < options.length; i++) {
-	 	total += options[i].value;
+	for (var i = 1; i < options.length; i++) {
+	 	total += +options[i].value;
 	 };
 
 	return total;
@@ -22,7 +22,7 @@ function average(options) {
 
 	for (var i = 0; i < options.length; i++) {
 		total += options[i];
-	}
+	};
 
 	return total / options.length;
 }
