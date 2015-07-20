@@ -1,28 +1,47 @@
-/*
-Hints for the first problem:
-  1. Define a function that:
-    - is assigned to a variable named `sum`
-    - has one parameter named `options`
-    - returns the calculated sum of all of the values of all of the options passed in
-NOTE: use a `for` loop to make this happen.
-*/
-
 function sum (options) {
-	var total = +options[0].value;
-
-	for (var i = 1; i < options.length; i++) {
+	var total = 0;
+	for (var i = 0; i < options.length; i++) {
 	 	total += +options[i].value;
 	 };
+	return total;
+}
 
+function countSelect(options) {
+	var count = 0;
+	for (var i = 0; i < options.length; i++) {
+		if (options[i].selected === true) {
+			count++;
+		};
+	};
+	return count;
+}
+
+function sumSelect(options) {
+	var total = 0;
+	for (var i = 0; i < options.length; i++) {
+		if (options[i].selected === true) {
+			total += +options[i].value;
+		};
+	};
 	return total;
 }
 
 function average(options) {
 	var total = 0;
-
 	for (var i = 0; i < options.length; i++) {
-		total += options[i];
+		total += +options[i].value;
 	};
-
 	return total / options.length;
+}
+
+function avgSelect(options) {
+	var total = 0;
+	var count = 0;
+	for (var i = 0; i < options.length; i++) {
+		if (options[i].selected === true) {
+			total += +options[i].value;
+			count++;
+		};
+	};
+	return total / count;
 }
