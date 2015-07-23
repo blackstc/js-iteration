@@ -45,3 +45,13 @@ function avgSelect(options) {
 	}
 	return total / count;
 }
+
+function countNames(names) {
+	var newNamesList = names.split("\n");
+	var finalList = "";
+
+	for (var i = 0; i < newNamesList.length; i++) {
+		finalList = newNamesList[i] + "\n";
+	}
+	return newNamesList;
+}
