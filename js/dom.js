@@ -52,7 +52,6 @@ if (document.URL === "file:///Users/Chuck/gSchool/exercises/js-iteration/index.h
   firstNamesBtn.addEventListener('click', function() {
     answer.innerHTML = "";
     var finalList = countNames(namesList);
-    var finalListNoPunctu
 
     for (var i = 0; i < finalList.length; i++) {
       var node = document.createElement('P');
